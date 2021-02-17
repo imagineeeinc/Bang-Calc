@@ -1,0 +1,138 @@
+:root {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font: monospace;
+}
+body {
+    background: rgb(0,0,64);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+}
+body::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(crimson, orange);
+    clip-path: circle(22% at 30% 20%);
+}
+body::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(purple, violet);
+    clip-path: circle(22% at 70% 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+#output::-webkit-scrollbar {
+    display: block;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0); 
+}
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: silver;
+}
+* {
+    transition-duration: .1s;
+    outline: none;
+}
+::selection {
+    background-color: rgb(0, 255, 127, 0.6);
+    color: black;
+    border-radius: 5px;
+}
+#content {
+    position: relative;
+    margin: 4px auto;
+    max-width: 40ch;
+    background-color: rgba(192, 192, 192, 0.05);
+    border-top: 1px solid rgba(192, 192, 192, 0.5);
+    border-left: 1px solid rgba(192, 192, 192, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 3px;
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(192, 192, 192, 0.2);
+}
+#output {
+    background-color: rgba(211, 211, 211, 0.1);
+    color: black;
+    border: 1px solid rgba(211, 211, 211, 0.05);
+    font-size: 40pt;
+    padding: 10px 0;
+    text-align: right;
+    font-weight: 600;
+    margin: 0;
+    grid-column: span 4;
+    height: 20vh;
+    color: white;
+    overflow-x: scroll;
+}
+#btns {
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: /*25% 25% 25% 25%*/ repeat(4, 25%);
+    column-gap: 0px;
+}
+#btns > span {
+    background-color: rgba(211, 211, 211, 0.1);
+    border: 1px solid rgba(211, 211, 211, 0.05);
+    border-collapse: collapse;
+    padding: 40px;
+    font-weight: 600;
+    -webkit-user-select: none;
+    line-height: 20px;
+    margin: 0;
+    text-align: center;
+    place-items: center;
+    cursor: pointer;
+    text-shadow: 0 0 1px blue;
+    font-size: 25pt;
+}
+#btns > .nums {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#btns > .clear {
+    background-color: rgba(220, 20, 120, 0.2);
+}
+#btns > .plus {
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btns > span:hover {
+    background-color: rgba(128, 255, 191, 0.2);
+    border: 1px solid rgba(128, 255, 191, 0.2);
+    box-shadow: 0 0 10px rgba(128, 255, 191, 0.3);
+    transform: scale(1.05);
+}
+#btns > span:active {
+    background-color: rgba(192, 192, 255, 0.3);
+    border: 1px solid rgba(128, 128, 255, 0.2);
+    box-shadow: 0 0 15px rgba(128, 128, 255, 0.3);
+    transform: scale(1.15);
+}

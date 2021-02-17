@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bang Calc</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <meta name="theme-color" content="white"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+        <link rel='icon' href='Favicon/favicon.ico' type='image/x-icon'>
+
+        <link rel="stylesheet" type="text/css" href="style.css" >
+        <!--<link rel="manifest" href="manifest.json">-->
+    </head>
+    <body>
+        <div id="content">
+            <div id="btns">
+                <input id="output">
+                <span class="clear" onclick="calc.value = ''">C</span>
+                <span class="clear" onclick="calc.value = calc.value.slice(0, -1)">⌫</span>
+                <span class="symbls" onclick="calc.value += '/'">/</span>
+                <span class="symbls" onclick="calc.value += '*'">*</span>
+                <span class="nums" onclick="calc.value += '7'">7</span>
+                <span class="nums" onclick="calc.value += '8'">8</span>
+                <span class="nums" onclick="calc.value += '9'">9</span>
+                <span class="symbls" onclick="calc.value += '-'">-</span>
+                <span class="nums" onclick="calc.value += '4'">4</span>
+                <span class="nums" onclick="calc.value += '5'">5</span>
+                <span class="nums" onclick="calc.value += '6'">6</span>
+                <span class="plus" onclick="calc.value += '+'">+</span>
+                <span class="nums" onclick="calc.value += '1'">1</span>
+                <span class="nums" onclick="calc.value += '2'">2</span>
+                <span class="nums" onclick="calc.value += '3'">3</span>
+                <span class="nums" onclick="calc.value += '0'">0</span>
+                <span class="nums" onclick="calc.value += '00'">00</span>
+                <span class="nums" onclick="calc.value += '.'">•</span>
+                <span class="equals" onclick="calc.value = eval(calc.value)">=</span>
+            </div>
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
+</html>
